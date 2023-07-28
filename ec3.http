@@ -1,0 +1,27 @@
+
+@server = https://georgegt91-improved-guide-vwg4jjwqpxhpv9x-8080.preview.app.github.dev
+@api = {{server}}/api/ec3
+
+################ Categorias: ################
+###
+GET {{api}}/categorias
+###
+POST {{api}}/categorias
+Content-Type: application/json
+
+{"nombre": "Instrumentos de Cuerda"}
+
+################ Instrumentos: ################
+###
+GET {{api}}/instrumentos
+
+###
+POST {{api}}/instrumentos
+Content-Type: application/json
+
+{"nombre": "Guitarra", "categoria": "https://georgegt91-improved-guide-vwg4jjwqpxhpv9x-8080.preview.app.github.dev/api/ec3/categorias/1"}
+
+###
+GET {{api}}/instrumentos/1/categoria
+###
+GET {{api}}/instrumentos?sort=nombre,desc
